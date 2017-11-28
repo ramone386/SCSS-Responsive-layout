@@ -1,0 +1,67 @@
+/* ================================= 
+  Page Portfolio
+==================================== */
+
+.container {
+    @extend %padding;
+  @extend %center;
+  margin: 0 25px;
+}
+
+#gallery {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+#gallery li {
+  @extend %center;
+  
+  @media #{$brk-narrow} {
+      max-width: 100%;
+      float: left ;
+      width: 50%;
+      margin: 0 auto;
+      padding: 5px;
+  }
+  
+  @media #{$brk-wide} {
+    width: 30%;
+    display: block;
+    margin-left: 2.5%;
+    margin-bottom: 4.5%;
+    max-height: 320px;
+  }
+  
+}
+
+#gallery li:nth-child(2n + 1) {
+  
+  @media #{$brk-narrow} {
+        clear: left;
+  }
+}
+
+#gallery li:nth-child(2n - 3) {
+  
+  @media #{$brk-wide} {
+      clear: right;
+  }
+}
+
+#gallery li a p {
+    @extend %center;
+  margin: 1.25em 1.25em;
+  padding: 0; 
+  font-size: .85em;
+  color: $color-text-black;
+}
+
+#gallery li a h2 {
+    @extend %center;
+  margin: 0;
+  padding-top: 5%;
+  color: $color-text-black;
+  font-size: 1em;
+}
+

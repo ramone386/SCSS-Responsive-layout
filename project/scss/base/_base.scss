@@ -1,0 +1,183 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+
+#wrapper {
+  @extend %padding;
+  width: 100%;
+  
+  @media #{$brk-wide} {
+    width: 100%;
+  }
+  
+}
+
+body {
+  
+  @include text($l-height: 1.6, $back-color: $color-media);
+  font-family: 'Nunito', sans-serif;
+	
+	@media #{$brk-narrow} {
+	  background: linear-gradient($color-media, white);
+	}
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.name {
+  padding: 1.5625em;
+}
+
+.student {
+    @extend %center;
+  color: $color-text-black;
+  
+  @media #{$brk-wide} {
+    float: left;
+  }
+  
+}
+
+nav {
+    @media #{$brk-narrow} {
+      text-align: center;
+    }
+    
+    @media #{$brk-wide} {
+      float: right;
+      display: block;
+      margin: 0 0 0 5%;
+      padding-top: 25px;
+    }
+    
+    a{
+    @media #{$brk-narrow} {
+      padding: 15px 1%;
+    }
+ }
+ 
+    ul {
+    margin: 0 auto;
+    padding: 0 ;
+   }
+ 
+}
+
+
+
+.main-nav li {
+  
+  @include text(15px, $color: $color-text-black, $back-color: $color-media, $text-trans: uppercase,
+                $m-bottom: 2px, $l-style: none, $display: block);
+
+  
+    @media #{$brk-narrow} {
+      display: inline-block;
+      padding: 0 20px;
+      background-color: $color-media ;
+      text-align: center;
+    }
+  
+}
+
+
+.main-nav a {
+    @extend %center;
+  display: block;
+  padding: 5px;
+  padding: 15px 0;
+  font-weight: bold;
+}
+
+.main-nav li a{
+  color: $color-text-black;
+}
+
+.main-nav li a:hover {
+  color: $color-text-blue;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+
+
+.profile {
+    @extend %padding;
+    @extend %center;
+  color: $color-text-base;
+  
+  @media #{$brk-wide} {
+    float: right;
+  }
+  
+  &-photo {
+  max-width: 60%;
+  border-radius: 90%;
+  
+  @media #{$brk-narrow} {
+      max-width: 20%;
+      border-radius: 90%;
+  }
+  
+ }
+ 
+  p {
+  
+  @include text(1.2em, $m-bottom: 10px, $padding: 0 20%);
+
+  
+  @media #{$brk-narrow} {
+      padding-left: 3.125em;
+      width: 70%;
+      margin-top: auto;
+  }
+  
+  @media #{$brk-wide} {
+      padding-left: 25px;
+      width: 60%;
+  }
+  
+ }
+ 
+  img {
+  
+  @media #{$brk-narrow} {
+      width: 35%;
+      float: right;
+      padding-right: 2%;
+      margin-left: 50px ;
+  }
+  
+ }
+ 
+ 
+  
+}
+
+
+/* Float Clearfix
+================================ */
+
+.group:after {
+  content: " ";
+  display: table;
+  clear: both;
+}

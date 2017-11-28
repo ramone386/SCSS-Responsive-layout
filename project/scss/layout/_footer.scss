@@ -1,0 +1,106 @@
+/* ================================= 
+  Footer Layout
+==================================== */
+
+.info {
+  @extend %center;
+  
+  ul li {
+  list-style:none;
+ }
+
+  p {
+  font-size: 16px;
+  margin: 0 1em;
+  
+  @media #{$brk-narrow} {
+    padding: 0 20%;
+  }
+}
+
+  ul li a{
+  @extend %center;
+  color: $color-text-black;
+  list-style: none;
+  text-decoration:none;
+  margin: 1em;
+ }
+
+  
+}
+
+
+/* ---- Layout Containers ---- */
+
+.main-footer {
+	padding: 2em 1.5625em;
+	border-top: .5px solid $color-text-base ;
+	
+	a {
+  color: $color-text-black;
+  float: right;
+ }
+
+  li {
+  display: none;
+ }
+	
+}
+
+
+
+.footer-name {
+  float: left;
+  margin: 0 auto;
+}
+
+.footer-nav {
+  
+  @media #{$brk-narrow} {
+    margin: 0 auto;
+  }
+  
+}
+
+.footer-nav a {
+  
+  @media #{$brk-narrow} {
+    padding: 0 15px 1%;
+  }
+  
+}
+
+
+.footer-nav li{
+  list-style: none;
+  font-weight: bold;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  
+  @media #{$brk-narrow} {
+    display: block;
+  }
+}
+
+.footer-nav li a {
+ margin: 0 auto;
+}
+
+.footer-nav li a:hover {
+  color: $color-text-blue;
+}
+
+#back-to-top {
+ font-weight: bold;
+ 
+ @media #{$brk-narrow} {
+         display: none;
+      vertical-align: top;
+ }
+ 
+ @media #{$brk-narrow} {
+        display: none;
+ }
+ 
+}

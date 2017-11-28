@@ -1,0 +1,39 @@
+
+// Web fonts
+
+@mixin font-face($family, $file) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$path-font}/#{$file}-webfont.eot');
+    src: url('#{$path-font}/#{$file}-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
+         url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
+  }
+}
+
+// Text
+
+@mixin text($size: null, $l-height: null, $weight: null, $color: null, $padding: null, $t-align: null,
+            $width: null, $t-decoration: null, $max-w: null, $margin: null, $l-style: null, 
+            $display: null, $m-bottom: null, $m-left: null, $text-trans: null, $back-color: null, $b-radius: null,
+            $float: null, $m-height: null) {
+  font-size: $size;
+  line-height: $l-height;
+  font-weight: $weight;
+  color: $color;
+  padding: $padding;
+  text-align: $t-align;
+  width: $width;
+  text-decoration: $t-decoration;
+  max-width: $max-w;
+  margin: $margin;
+  list-style: $l-style;
+  display: $display;
+  margin-bottom: $m-bottom;
+  margin-left: $m-left;
+  text-transform: $text-trans;
+  background-color: $back-color;
+  border-radius: $b-radius;
+  float: $float;
+  max-height: $m-height;
+}
